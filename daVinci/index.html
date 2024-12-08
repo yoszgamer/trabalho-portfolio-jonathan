@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonardo da Vinci</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #F4ECE1;
+            color: #3E2F28;
+        }
+
+        .container {
+            display: grid;
+        }
+
+        header {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: #8A6A4F; 
+            color: #F4ECE1;
+        }
+
+        .menu {
+            grid-column-start: 6;
+            grid-column-end: 12;
+            justify-content: center;/*centraliza o menu*/
+            gap: 20px;
+        }
+
+        .imagem_leo {
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+        }
+
+        .imagem_leo img {
+            max-width: 100%;
+            border-radius: 10px;
+            border: 2px solid #8A6A4F;
+        }
+
+        .principal {
+            grid-column-start: 4;
+            grid-column-end: 12;
+            padding-left: 15px;
+            padding-right: 15px;
+            text-align: justify;
+
+        }
+
+        footer {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: #8A6A4F;
+            color: #F4ECE1;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            color: #8A6A4F;
+        }
+
+        a,
+        a:link {
+            text-decoration: none;
+            padding: 8px 16px;
+            border: solid #8A6A4F 1px;
+            color: #3E2F28;
+        }
+
+        li {
+            float: left;
+        }
+
+        a:hover {
+            background-color: #8A6A4F; 
+            color: #F4ECE1; 
+        }
+
+        @media all and (min-width: 35rem) {
+            body {
+                margin: 0 auto;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+
+            }
+        }
+
+        /* media query para dispositivos móveis */
+        @media only screen and (max-width: 767px) {
+            .wrapper {
+                grid-column-start: 1;
+                grid-column-end: 1;
+
+            }
+
+            .imagem_leo {
+                grid-column-start: 1;
+                grid-column-end: 1;
+
+            }
+
+            .principal {
+                grid-column-start: 1;
+                grid-column-end: 1;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container">
+        <h1 style="color: white; text-align: center;">Biografia Leonardo da Vinci</h1>
+        <br>
+
+    </header>
+    <nav class="container menu">
+        <ul>
+            <li><a href="index.html">Biografia</a></li>
+            <li><a href="obras.html">Obras</a></li>
+            <li><a href="curiosidades.html">Curiosidades</a></li>
+        </ul>
+    </nav>
+    <div class="container wrapper">
+        <aside class="imagem_leo">
+            <img src="imagens/leonardo-da-vinci.png">
+            <div class="infos">
+                <p><strong>Ocupação</strong> Pintor italiano</p>
+                <p>
+                    <strong>Data do Nascimento</strong>
+                    15/04/1452
+                </p>
+                <p><strong>Data da Morte</strong> 02/05/1519 (aos 67 anos)</p>
+            </div>
+
+        </aside>
+        <section class="principal">
+            <h1>
+                Leonardo da Vinci
+            </h1>
+            <p>Leonardo da Vinci (1452–1519) foi um dos maiores expoentes do Renascimento, conhecido por sua genialidade multifacetada como pintor, inventor, cientista e filósofo. Nascido na pequena cidade de Vinci, na Itália, Leonardo era filho ilegítimo de um tabelião e de uma camponesa, mas sua condição não impediu que ele demonstrasse desde cedo talento artístico. Aos 14 anos, ingressou no ateliê do renomado Andrea del Verrocchio, onde aprendeu pintura, escultura, metalurgia e outras técnicas que definiram sua carreira. Ainda jovem, destacou-se por sua habilidade em capturar expressões humanas e criar composições dinâmicas.</p>
+            <p>Como pintor, Leonardo criou algumas das obras mais icônicas da história da arte. Mona Lisa, com seu sorriso enigmático, é amplamente considerada o ápice da arte renascentista, enquanto A Última Ceia impressiona pelo uso da perspectiva e pela profundidade emocional de seus personagens. No entanto, muitas de suas pinturas permanecem inacabadas, reflexo de seu perfeccionismo e de sua constante busca por inovação. Para Leonardo, a arte era inseparável da ciência, e ele acreditava que o conhecimento do mundo natural era essencial para criar obras verdadeiramente realistas.</p>
+            <p>Paralelamente, Leonardo foi um cientista brilhante e um observador meticuloso. Ele realizou estudos pioneiros de anatomia, dissecando cadáveres para entender o corpo humano em detalhes. Seus cadernos são repletos de esboços anatômicos, diagramas de plantas, mapas geográficos e projetos mecânicos. Entre suas invenções imaginadas estão máquinas voadoras, tanques de guerra e sistemas hidráulicos. Apesar de muitas dessas ideias não terem sido construídas em sua época, elas demonstram sua mente visionária e o antecipam como precursor da engenharia moderna.</p>
+            <p>Leonardo também teve um papel importante como engenheiro e arquiteto, trabalhando para os mais influentes patronos de seu tempo, incluindo os Médici em Florença, Ludovico Sforza em Milão e o rei Francisco I da França. Ele projetou fortificações militares, dispositivos hidráulicos e até cenários para espetáculos teatrais. Sua capacidade de integrar arte e ciência o tornou único, permitindo-lhe abordar problemas complexos com uma perspectiva interdisciplinar.</p>
+            <p>Nos últimos anos de sua vida, Leonardo viveu na França, sob a proteção de Francisco I, que o considerava um amigo e um tesouro nacional. Ele morreu em 1519, deixando um legado que continua a inspirar o mundo. Sua obra transcende a pintura, estendendo-se para os campos da ciência, da tecnologia e da filosofia. Leonardo da Vinci permanece como um símbolo do ideal renascentista, representando a busca incessante pelo conhecimento e pela beleza em todas as suas formas.</p>
+            <p>*Texto obtido através do chatGPT*</p>
+        </section>
+    </div>
+    <footer class="container">
+        <h1>Desenvolvido para fins educacionais</h1>
+    </footer>
+    </div>
+</body>
+
+</html>

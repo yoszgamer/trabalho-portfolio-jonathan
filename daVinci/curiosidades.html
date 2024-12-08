@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonardo da Vinci</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #F4ECE1;
+            color: #3E2F28;
+        }
+
+        .container {
+            display: grid;
+        }
+
+        header {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: #8A6A4F; 
+            color: #F4ECE1;
+        }
+
+        .menu {
+            grid-column-start: 6;
+            grid-column-end: 12;
+            justify-content: center;/*centraliza o menu*/
+            gap: 20px;
+        }
+
+        .imagem_leo {
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+        }
+
+        .imagem_leo img {
+            max-width: 100%;
+            border-radius: 10px;
+            border: 2px solid #8A6A4F;
+        }
+
+        .principal {
+            grid-column-start: 4;
+            grid-column-end: 12;
+            padding-left: 15px;
+            padding-right: 15px;
+            text-align: justify;
+
+        }
+
+        footer {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: #8A6A4F;
+            color: #F4ECE1;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            color: #8A6A4F;
+        }
+
+        a,
+        a:link {
+            text-decoration: none;
+            padding: 8px 16px;
+            border: solid #8A6A4F 1px;
+            color: #3E2F28;
+        }
+
+        li {
+            float: left;
+        }
+
+        a:hover {
+            background-color: #8A6A4F; 
+            color: #F4ECE1; 
+        }
+
+        @media all and (min-width: 35rem) {
+            body {
+                margin: 0 auto;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+
+            }
+        }
+
+        /* media query para dispositivos móveis */
+        @media only screen and (max-width: 767px) {
+            .wrapper {
+                grid-column-start: 1;
+                grid-column-end: 1;
+
+            }
+
+            .imagem_leo {
+                grid-column-start: 1;
+                grid-column-end: 1;
+
+            }
+
+            .principal {
+                grid-column-start: 1;
+                grid-column-end: 1;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container">
+        <h1 style="color: white; text-align: center;">Biografia Leonardo da Vinci</h1>
+        <br>
+
+    </header>
+    <nav class="container menu">
+        <ul>
+            <li><a href="index.html">Biografia</a></li>
+            <li><a href="obras.html">Obras</a></li>
+            <li><a href="curiosidades.html">Curiosidades</a></li>
+        </ul>
+    </nav>
+    <div class="container wrapper">
+        <aside class="imagem_leo">
+            <img src="imagens/leonardo-da-vinci.png">
+            <div class="infos">
+                <p><strong>Ocupação</strong> Pintor italiano</p>
+                <p>
+                    <strong>Data do Nascimento</strong>
+                    15/04/1452
+                </p>
+                <p><strong>Data da Morte</strong> 02/05/1519 (aos 67 anos)</p>
+            </div>
+
+        </aside>
+        <section class="principal">
+            <h1>
+                Curiosidades
+            </h1>
+            <p>
+                Leonardo da Vinci é frequentemente lembrado por suas inúmeras invenções e ideias futuristas, muitas das quais estavam séculos à frente de seu tempo. Ele desenhou protótipos de máquinas voadoras, como o ornitóptero, inspirado no voo de pássaros, e conceitos para um paraquedas funcional. Além disso, criou esboços de tanques blindados e armas de guerra, embora fosse conhecido por seu pacifismo. Leonardo também projetou sistemas hidráulicos para irrigação e esboçou ideias para cidades planejadas, com infraestrutura avançada para combater epidemias e melhorar a qualidade de vida.</p>
+            <p>Uma de suas características mais marcantes era seu hábito de registrar tudo em cadernos. Leonardo escreveu de forma espelhada (da direita para a esquerda), exigindo um espelho para ser lido. Embora alguns especulem que isso era uma forma de codificar seus pensamentos, é mais provável que fosse simplesmente mais confortável para ele, já que era canhoto. Esses cadernos não apenas documentam suas obras de arte, mas também contêm estudos detalhados de anatomia, teorias científicas e anotações cotidianas, oferecendo uma visão fascinante de sua mente inquieta.</p>
+            <p>Leonardo também era obcecado pela observação da natureza. Ele passava horas estudando o movimento da água, o comportamento de pássaros e a anatomia de plantas. Ele acreditava que compreender os padrões e processos naturais era essencial para sua arte e invenções. Seu interesse pela anatomia humana o levou a dissecar cadáveres, algo extremamente controverso para a época. Seus estudos resultaram em desenhos anatômicos tão precisos que ainda são usados como referência científica até hoje.</p>
+            <p>Curiosamente, apesar de sua genialidade, Leonardo completou poucas obras de arte em comparação a outros grandes mestres. Seu perfeccionismo e fascínio por múltiplos interesses frequentemente o faziam abandonar projetos ou atrasar sua conclusão. Além disso, ele era conhecido por criar "festas de ideias", explorando conceitos em várias áreas antes de se dedicar a uma única realização prática. Esse traço, longe de ser um defeito, contribuiu para sua reputação como um verdadeiro homem do Renascimento, cuja curiosidade ilimitada transcendeu qualquer fronteira artística ou científica.</p>
+            <p>*Texto obtido através do chatGPT*</p>            
+        </section>
+    </div>
+    <footer class="container">
+        <h1>Desenvolvido para fins educacionais</h1>
+    </footer>
+    </div>
+</body>
+
+</html>

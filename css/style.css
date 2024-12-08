@@ -1,0 +1,232 @@
+/*------ Todas as páginas ------*/
+
+/* Estilo Global */
+    /* Essa seção dá uma base de estilo, background e alinhamento para todo o site */
+    html, body {
+        height: 100%;
+        display: flexbox;
+        place-content: center;
+        background-image: url(background.png);/* imagem gratuita */
+        background-size: 50%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        box-sizing: border-box;
+    }
+    
+/* GRID*/
+    /* Essa seção define o tamanho da grid única do site, separando as áreas por nome */
+    .container{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 100vh;
+        grid-template-rows: 150px 50px 1fr 50px;
+        grid-template-areas:
+        "titulo"
+        "menu"
+        "principal"
+        "rodape";
+    }
+    
+/* Cabeçalho */
+        /* Essa seção define a posição na grid do cabeçalho e seu estilo */
+    #tituloBanner{
+        grid-area: titulo;
+        display: grid;
+        place-content: center;
+        font-size: large;
+        text-align: center;
+        background-color: #5468A0;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+        font-weight: bolder;
+        color: #F4F0E6;
+        letter-spacing: 2px;
+    }
+    .estilo2{
+        font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: lighter;
+        color: #603da1;
+        background-color: #F4F0E6;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 5px;
+        letter-spacing: normal;
+    }
+    
+/* Menu */
+        /* Essa seção define a posição na grid, estiliza e alinha a barra de menu de navegação do site */
+    .menu{
+        grid-area: menu;
+        background-color: #494949;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+    }
+        /* Essa seção alinha os botões horizontalmente e cria um gap entre eles */
+    .menu ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 20px;
+    }
+    
+        /* Essa seção 'cria' a aparência de botão */
+    .menu ul li a {
+        text-decoration: none; /* Remove toda estilização do texto */
+        color: white; /* Cor do texto */
+        padding: 10px 15px;
+        border-radius: 4px;
+        background-color: #555;
+        display: inline-block;
+    }
+    
+/* Conteúdo */
+        /* Essa seção define a posição na grid, estiliza e alinha de forma geral os elementos da parte principal do site */
+    .conteudo{
+        grid-area: principal;
+        text-align: center;
+        border: #555;
+        background-color: #F4F0E6;
+        margin-left: 5px;
+        margin-right: 5px;
+        box-shadow: 0 0 0 5px #494949;
+    }
+    .conteudo h1{
+        display: inline-flex;
+        margin: 15px;
+        color: #603da1;
+    }
+    
+/* Rodapé */
+        /* Essa seção define a posição na grid, estiliza e alinha o rodapé */
+    .caixaRodape{
+        grid-area: rodape;
+        background-color: #494949;
+        border: #494949;
+        border-radius: 3px;
+    }
+        /* Essa seção estiliza e alinha o texto do rodapé */
+    #rodape{
+        display: block;
+        text-align: center;
+        font-size: small;
+        color: #fffbf5;
+        margin-top: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    
+/* Media Query para ajustar o layout a telas menores */
+    @media (max-width: 920px) {
+        .container {
+            grid-template-columns: 70vh; 
+            grid-template-rows: 150px 50px 1fr 50px;
+        }
+        #tituloBanner {
+            font-size: large;/ 
+        }
+        .menu {
+            padding: 10px 15px;
+        }
+        .menu ul {
+            gap: 10px;
+        }
+        .menu ul li a{
+            text-align: center;
+            font-size: medium;
+        }
+    }
+    
+/* Media Query para ajustar o layout a telas muito pequenas */
+    @media (max-width: 530px){
+        .container{
+            grid-template-columns: 60vh;
+            grid-template-rows: 150px 50px auto 50px;
+        }
+        #tituloBanner{
+            font-size: smaller;
+            margin-top: 25px;
+        }
+        .estilo2{
+            font-size: small;
+        }
+        .conteudo{
+            padding: 10px;
+        }
+        .img1{
+            max-width: 40%;
+        }
+    }
+    
+/*------ Página Index ------*/
+        /* Essa seção faz com que as imagens da página index fiquem do tamanho desejado, alinhadas lado a lado e com uma 'moldura' arredondada atrás */
+    .img1{
+        display: inline-flex;
+        width: 90%;
+        max-width: 200px;
+        padding: 5px;
+        background-color: #555;
+        border-radius: 15px;
+        margin-top: 10px;
+    }
+    .img1 img{
+        border-radius: 10px;
+        width: 100%;
+        height: auto;
+    }
+    
+/*------ Página Qualificação ------*/
+        /* Essa seção estiliza e alinha as listas e sublistas da página qualificação */
+    .qualif ul li{
+        text-align: left;
+    }
+    .tituloQuali{
+        list-style-type: square;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    .itemQuali{
+        margin-top: 5px;
+        font-weight: normal;
+        font-size: small;
+    }
+    
+/*------ Página Portfólio ------*/
+        /* Essa seção faz com que o texto fique à esquerda da foto, alinhado à direita do parágrafo, e com que a foto fique à direita do texto, ambos centralizados horizontalmente
+        na página e também dá o mesmo efeito da página index de moldura arredondada nas imagens */
+    #alinhaPort{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+    .ladoTexto{
+        display: inline-flex;
+        text-align: right;
+        align-items: center;
+        border-radius: 5px;
+        background-color: #494949;
+        color: #fffbf5;
+        padding-left: 10px; 
+        padding-right: 10px;
+    }
+    .ladoImg{
+        display: inline-flex;
+        width: 90%;
+        max-width: 300px;
+        padding: 5px;
+        background-color: #555;
+        border-radius: 15px;
+        margin-top: 10px;
+        text-align: left;
+        margin-bottom: 15px;
+    }
+    .ladoImg img{
+        border-radius: 10px;
+        width: 100%;
+        height: auto;
+    }
+    

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"> <!-- Utiliza a estilização do arquivo externo style.css -->
+    <title>Contato</title>
+</head>
+<!--    Corpo usado para criar a grid    -->
+<body class="container">
+    <!--    Cabeçalho    -->
+    <header id="tituloBanner">
+        <div id="logo">
+            <h1>Portfólio<br><span class="estilo2">Jonathan Henrique</span></h1>
+        </div>
+    </header>    
+    <!--    Menu de navegação    -->
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Sobre mim</a></li>             <!-- Botão => Página "Sobre mim" -->
+            <li><a href="qualificacao.html">Qualificação</a></li>   <!-- Botão => Página "Qualificação" -->
+            <li><a href="portfolio.html">Portfólio</a></li>         <!-- Botão => Página "Portfólio" -->
+            <li><a href="contato.html">Contato</a></li>             <!-- Botão => Página "Contato" -->
+        </ul>
+    </nav>
+    <!--    Parte principal da página    -->
+    <section class="conteudo">  <!-- Classe "conteudo" para estilizar o conteúdo principal de todas as páginas de forma geral -->
+        <article>
+            <h1>Contato</h1>    <!-- Tópico da página -->
+            <p>Para entrar em contato, preencha o formulário e digite sua mensagem abaixo:</p>       
+            <br>
+            <!--    Formulário destinado ao envio de uma mensagem    -->
+                <!-- Contém 2 inputs (email e nome), um text-area (mensagem) e um botão do tipo submit -->
+            <form id="formularioMsg">
+                <label for="email">Email:</label><br> 
+                <input type="email" id="email" name="email" required placeholder="Digite seu email">
+                <br><br>
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+                <br><br>
+                <label for="msg">Mensagem:</label><br>
+                <textarea id="msg" name="msg" rows="5" cols="50" required placeholder="Digite aqui sua mensagem!"></textarea>
+                <br><br>
+                <button type="submit">Enviar!</button>
+            </form>
+            <!--    JavaScript    -->
+                <!-- Esse código faz com que, ao apertar o botão "Enviar!", caso todos os campos do formulário sejam preenchidos, um alerta seja exibido avisando que a mensagem foi enviada com sucesso --> 
+            <script>
+                const mensagem = document.getElementById('formularioMsg');
+                    mensagem.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    if (mensagem.checkValidity()) {
+                        alert('Mensagem enviada! Não há prazo de retorno');
+                        mensagem.reset();
+                    }
+                });
+            </script>
+        </article>
+    </section>
+    <!--    Rodapé com informações do trabalho    -->
+    <div class="caixaRodape">
+        <footer id="rodape">Este site foi criado por Jonathan Henrique Pereira Martins, aluno de RU: 5020163 do curso de ANÁLISE E DESENVOLVIMENTO DE SISTEMAS da faculdade Uninter.</footer>
+    </div> 
+</body>
+</html>
